@@ -3,7 +3,7 @@
 /node_modules
 .vscode
 .env
-
+orm.config.json
 # Logs
 logs
 *.log
