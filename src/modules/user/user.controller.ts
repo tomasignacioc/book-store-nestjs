@@ -15,7 +15,7 @@ export class UserController {
         return user;
     }
 
-    @Get('all')
+    @Get()
     async getUsers(): Promise<UserDto[]> {
         const users = await this._userService.getAll();
         return users;
