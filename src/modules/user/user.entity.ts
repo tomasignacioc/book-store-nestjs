@@ -16,8 +16,8 @@ export class User extends BaseEntity {
     @Column({ type: 'varchar', nullable: false })
     password: string;
 
-    @OneToOne(type => UserDetails, { cascade: true, nullable: true, eager: true })
-    @JoinColumn({ name: 'detail_id' })
+    @OneToOne(type => UserDetails, { cascade: true, nullable: false, eager: true })
+    @JoinTable({ name: 'detail_id' })
     details: UserDetails;
 
     @ManyToMany(type => Role, role => role.users, { eager: true })

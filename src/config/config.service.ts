@@ -16,7 +16,8 @@ export class ConfigService {
                 process.exit(0);
             }
 
-            this.envConfig = parse(fs.readFileSync(envFilePath));
+            this.envConfig = parse(fs.readFileSync(envFilePath)); // parsea las variables de entorno como par clave-valor,
+            // de tal forma que quedaria: envConfig = {HOST: 'localhost', USERNAME: 'postgres', ...}
         } else {
             this.envConfig = {
                 PORT: process.env.PORT,
