@@ -13,6 +13,7 @@ export const databaseProviders = [
             return {
                 // ssl: true,
                 type: 'postgres' as 'postgres',
+                port: 5444,
                 host: config.get(Configuration.HOST),
                 username: config.get(Configuration.USERNAME),
                 password: config.get(Configuration.PASSWORD),

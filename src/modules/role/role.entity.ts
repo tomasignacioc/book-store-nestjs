@@ -13,7 +13,7 @@ export class Role extends BaseEntity {
     description: string;
 
     @ManyToMany(type => User, user => user.roles)
-    @JoinTable()
+    @JoinColumn()
     users: User[];
 
     @Column({ type: 'varchar', default: 'ACTIVE', length: 8 })
